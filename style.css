@@ -18,7 +18,7 @@
     background: linear-gradient(to bottom right, blue, red);
 }
 
-.button1, .button2, .button3 {
+.button1, .button2, .button3, .button4 {
     padding: 2em;
     font-size: 1.4em;
     font-weight: bold;
@@ -88,17 +88,17 @@
 } 
 
 
-.button3 {
+.button3, .button4 {
     background-color: transparent;
     border: 2px solid #fff;
     overflow: hidden;
     z-index: 1;
 }
 
-.button3::before {
+.button3::before, .button4::before {
     position: absolute;
     content: '';
-    background-color: orangered;
+    background-color: orange;
     width: 100%;
     height: 100%;
     top: 0;
@@ -108,6 +108,40 @@
     z-index: -1;
 }
 
-.button3:hover::before {
-    transform: translate(100%);
+.button4:hover {
+    color: #333;
+}
+
+.button3:hover::before,
+.button4:hover::before
+{
+    left: 0;
+}
+
+.button4::after {
+    position: absolute;
+    content: '';
+    background-color: greenyellow;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    border-radius: 50px;
+    transition: all .4s ease;
+    z-index: -1;
+}
+
+@keyframes green-slide {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.button4:hover::after {
+    animation: green-slide .4s ease .4s;
+    right: 0;
 }
