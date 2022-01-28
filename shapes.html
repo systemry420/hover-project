@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <link rel="stylesheet" href="shapes.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        .triangle {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(to bottom, red, blue);
+            clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="triangle"></div>
+
+    </div>
+</body>
+</html>
