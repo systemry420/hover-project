@@ -17,22 +17,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: auto;
             background-color: #333;
+            flex-wrap: wrap;
         }
 
+        .shape {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(to bottom, red, yellow);
+            margin: 2em;
+        }
+        
         .triangle {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(to bottom, red, blue);
             clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+        }
+
+        .hexagon {
+            clip-path: polygon(
+                50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%
+            );
+        }
+
+        .badge {
+            margin: -5%;
+            height: 100px;
+            clip-path: polygon(
+                0% 0%, 50% 40%, 100% 0%, 100% 60%, 50% 100%, 0% 60%
+            );
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="triangle"></div>
-
+        <div class="shape triangle"></div>
+        <div class="shape hexagon"></div>
+        <div style="margin: 2em;">
+            <div class="shape badge"></div>
+            <div class="shape badge"></div>
+            <div class="shape badge"></div>
+        </div>
     </div>
 </body>
 </html>
