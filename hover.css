@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    margin: .5em;
+    font-size: 2.5em;
+}
+
 .element {
     width: 500px;
     height: 400px;
@@ -125,3 +131,67 @@
     right: 30px;
     left: 30px;
 }
+
+/************* Element 3 *************/
+
+.element3 .curtain-container {
+    /* z-index: 1; */
+}
+
+.element3 .curtain-container .curtain {
+    position: absolute;
+    width: calc(25%);
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #222;
+    transition: all 0.5s ease;
+    transform: scale(0, 1);
+}
+
+.element3 .front {
+    z-index: 4;
+    opacity: 1;
+}
+
+.element3 .back {
+    z-index: 1;
+}
+
+.element3 .back .back-content {
+    transform: scale(0);
+    translate: all 0.5s ease;
+}
+
+.element3 .curtain-container .curtain:nth-child(2) {
+    left: calc(25%);
+}
+
+.element3 .curtain-container .curtain:nth-child(3) {
+    left: 50%;
+}
+
+.element3 .curtain-container .curtain:nth-child(4) {
+    left: 75%;
+}
+
+.element3 .curtain-container .element3:hover .curtain {
+    width: 0;
+}
+
+.element3:hover .front {
+    opacity: 0;
+}
+
+.element3:hover .back{
+    color: #fff;
+}
+
+.element:hover .back .back-content {
+    transform: scale(1);
+}
+
+.element3:hover .curtain {
+    transform: scale(1, 1);
+}
+
