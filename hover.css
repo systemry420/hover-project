@@ -12,6 +12,10 @@ h1 {
     font-size: 2.5em;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 .element {
     width: 450px;
     height: 400px;
@@ -116,6 +120,7 @@ h1 {
 
 .element2:hover .front {
     top: -150%;
+    opacity: 0;
 }
 
 .element2:hover .back::before {
@@ -221,4 +226,41 @@ h1 {
 .element4:hover .back::after {
     right: 50px;
     left: 50px;
+}
+
+.element4 .back .back-content {
+    transform: translateX(-30%);
+    transition: all .5s ease;
+}
+
+.element4:hover .back .back-content {
+    transform: translateX(0);
+}
+
+/************* Element 5 *************/
+
+.element5 {
+    overflow: hidden;
+}
+
+.element5 .front {
+    transform: skewX(0deg);
+    opacity: 1;
+    left: 0;
+    transition: transform 0.3s ease, left 0.4s ease 0.3s, opacity 0.4s ease 0.3s;
+}
+
+.element5:hover .front {
+    transform: skewX(-20deg);
+    left: -100%;
+    opacity: 0;
+}
+
+.element5 .back-content {
+    opacity: 0;
+    transition: all 0.4s ease 0.5s;
+}
+
+.element5:hover .back-content {
+    opacity: 1;
 }
