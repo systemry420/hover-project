@@ -24,7 +24,7 @@ h3 {
     border: 1px solid black;
     box-shadow: 0 0 5px 5px gray;
     margin: 1em;
-    background-color: orange;
+    background-color: transparent;
 }
 
 .element .front {
@@ -291,3 +291,48 @@ h3 {
 .element6:hover .back-content {
     opacity: 1;
 }
+
+/************* Element 7 *************/
+
+.element7 .front {
+    opacity: 1;
+    transition: all .6s ease;
+}
+
+.element7 .back {
+    background: linear-gradient(to bottom right, green, yellow);
+    border-radius: 0 40%;
+}
+
+.element7:hover, .element:hover .back{
+    border-radius: 0 40%;
+}
+
+.element7:hover .front {
+    opacity: 1;
+    transform: translateX(-150%) rotateY(720deg);
+}
+
+.element7 .back .back-content .pname {
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all .8s ease;
+}
+
+.element7 .back .back-content .description {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .8s ease;
+}
+
+.element7:hover .back .back-content .pname {
+    opacity: 1;
+    top: 0px;
+    transform: translateY(0%);
+}
+
+.element7:hover .back .back-content .description {
+    opacity: 1;
+    bottom: 0px;
+    transform: translateY(0%);
+}   
