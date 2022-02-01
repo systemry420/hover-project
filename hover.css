@@ -17,8 +17,8 @@ h3 {
 }
 
 .element {
-    width: 450px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
     float: left;
     position: relative;
     border: 1px solid black;
@@ -54,6 +54,11 @@ h3 {
     align-items: center;
     text-align: center;
     z-index: 0;
+}
+
+.element .back .back-content {
+    padding: 1em;
+    font-size: 1.3em;
 }
 
 /************* Element 1 *************/
@@ -230,11 +235,13 @@ h3 {
 
 .element4 .back .back-content {
     transform: translateX(-30%);
+    opacity: 0;
     transition: all .5s ease;
 }
 
 .element4:hover .back .back-content {
     transform: translateX(0);
+    opacity: 1;
 }
 
 /************* Element 5 *************/
@@ -262,5 +269,25 @@ h3 {
 }
 
 .element5:hover .back-content {
+    opacity: 1;
+}
+
+/************* Element 6 *************/
+
+.element6 .front {
+    transition: all .4s ease;
+}
+
+.element6:hover .front {
+    transform: scale(0.35) translateY(80%);
+    box-shadow: 0 0 20px 20px #222;
+}
+
+.element6 .back .back-content {
+    opacity: 0;
+    transition: all .9s ease;
+}
+
+.element6:hover .back-content {
     opacity: 1;
 }
