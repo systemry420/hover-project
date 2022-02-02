@@ -313,31 +313,35 @@ h3 {
     transform: translateX(-150%) rotateY(720deg);
 }
 
-.element7 .back .back-content .pname {
+.element7 .back .back-content .pname,
+.element9 .back .back-content .pname {
     opacity: 0;
     transform: translateY(-50%);
     transition: all .8s ease;
 }
 
-.element7 .back .back-content .description {
+.element7 .back .back-content .description,
+.element9 .back .back-content .description {
     opacity: 0;
     transform: translateY(50%);
     transition: all .8s ease;
 }
 
-.element7:hover .back .back-content .pname {
+.element7:hover .back .back-content .pname,
+.element9:hover .back .back-content .pname {
     opacity: 1;
     top: 0px;
     transform: translateY(0%);
 }
 
-.element7:hover .back .back-content .description {
+.element7:hover .back .back-content .description,
+.element9:hover .back .back-content .description {
     opacity: 1;
     bottom: 0px;
     transform: translateY(0%);
 }   
 
-/************* Element 7 *************/
+/************* Element 8 *************/
 
 .element8 .front {
     transform: rotateY(0deg);
@@ -357,4 +361,40 @@ h3 {
 .element8:hover .back .back-content {
     opacity: 1;
     transform: scale(1);
+}
+
+/************* Element 9 *************/
+
+.element9:hover .front {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+}
+
+.element9 .back::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    right: 20px;
+    top: 20px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transition: all 1s ease;
+}
+
+.element9 .back::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    left: 20px;
+    bottom: 20px;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transition: all 1s ease;
+}
+
+.element9:hover .back::before, .element9:hover .back::after {
+    width: 100px;
+    height: 100px;
 }
