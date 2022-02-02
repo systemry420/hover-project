@@ -350,6 +350,7 @@ h3 {
 
 .element8:hover .front {
     transform: rotateY(180deg);
+    opacity: 0;
 }
 
 .element8 .back .back-content {
@@ -365,8 +366,12 @@ h3 {
 
 /************* Element 9 *************/
 
+.element9 {
+    overflow: hidden;
+}
+
 .element9:hover .front {
-    transform: translate(-100%, -100%);
+    transform: translate(100%, -100%);
     opacity: 0;
 }
 
@@ -397,4 +402,39 @@ h3 {
 .element9:hover .back::before, .element9:hover .back::after {
     width: 100px;
     height: 100px;
+}
+
+/************* Element 10 *************/
+
+.element10 {
+    overflow: hidden;
+}
+
+.element10 .front, .element10 .back, .element10 .back .back-content {
+    border-radius: 0 0 50% 50%;
+    border: none;
+    box-shadow: none;
+}
+
+.element10 .front {
+    opacity: 1;
+    border-radius: 0;
+    top: 0;
+}
+
+.element10 .back {
+    top: -100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.element10:hover .front {
+    opacity: 0;
+    top: 100%;
+}
+
+.element10:hover .back {
+    top: 0;
+    opacity: 1;
 }
