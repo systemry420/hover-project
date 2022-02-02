@@ -304,7 +304,7 @@ h3 {
     border-radius: 0 40%;
 }
 
-.element7:hover, .element:hover .back{
+.element7:hover, .element7:hover .back{
     border-radius: 0 40%;
 }
 
@@ -336,3 +336,25 @@ h3 {
     bottom: 0px;
     transform: translateY(0%);
 }   
+
+/************* Element 7 *************/
+
+.element8 .front {
+    transform: rotateY(0deg);
+    transform-origin: right;
+}
+
+.element8:hover .front {
+    transform: rotateY(180deg);
+}
+
+.element8 .back .back-content {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.7s ease;
+} 
+
+.element8:hover .back .back-content {
+    opacity: 1;
+    transform: scale(1);
+}
