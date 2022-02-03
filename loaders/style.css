@@ -5,22 +5,22 @@
 
 .parent {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     height: 100vh;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
 }
 
 .loader {
     position: relative;
-}
-
-.loader1 {
     height: 200px;
     width: 200px;
     margin: 0;
     border: 1px solid #fff;
 }
+
+/*********** Loader 1 ************/
 
 .loader1 span {
     position: absolute;
@@ -64,5 +64,71 @@
     bottom: 0;
 }
 
+/*********** Loader 2 ************/
 
+.loader2 span {
+    display: inline-flex;
+    width: 20px;
+    margin-top: 2em;
+    position: absolute;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 20px;
+    top: 0;
+}
 
+@keyframes bar-anim {
+    0%, 50%, 100% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.75);
+    }
+}
+
+.loader2 span:nth-child(1) {
+    left: 0px;
+    background-color: indigo;
+    animation: bar-anim 1s ease infinite;
+}
+
+.loader2 span:nth-child(2) {
+    left: 25px;
+    background-color: violet;
+    animation: bar-anim 1s ease infinite .1s;
+} 
+
+.loader2 span:nth-child(3) {
+    left: 50px;
+    background-color: blue;
+    animation: bar-anim 1s ease infinite .2s;
+} 
+
+.loader2 span:nth-child(4) {
+    left: 75px;
+    background-color: green;
+    animation: bar-anim 1s ease infinite .3s;
+} 
+
+.loader2 span:nth-child(5) {
+    left: 100px;
+    background-color: yellow;
+    animation: bar-anim 1s ease infinite .4s;
+}
+
+.loader2 span:nth-child(6) {
+    left: 125px;
+    background-color: orange;
+    animation: bar-anim 1s ease infinite .5s;
+} 
+
+.loader2 span:nth-child(7) {
+    left: 150px;
+    background-color: red;
+    animation: bar-anim 1s ease infinite .6s;
+} 
+
+.loader2 span:nth-child(8) {
+    left: 175px;
+    animation: bar-anim 1s ease infinite .7s;
+} 
