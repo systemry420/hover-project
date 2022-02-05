@@ -27,7 +27,7 @@
     width: 100px;
     height: 100px;
     display: inline-block;
-    animation: loader 2s ease infinite;
+    /* animation: loader 2s ease infinite; */
 }
 
 @keyframes loader {
@@ -82,53 +82,117 @@
         transform: scale(1);
     }
     60% {
-        transform: scale(1.75);
+        transform: scale(1.6);
     }
 }
 
 .loader2 span:nth-child(1) {
     left: 0px;
     background-color: indigo;
-    animation: bar-anim 1s ease infinite;
+    box-shadow: 0 0 7px indigo;
+    /* animation: bar-anim 1s ease infinite; */
 }
 
 .loader2 span:nth-child(2) {
     left: 25px;
     background-color: violet;
-    animation: bar-anim 1s ease infinite .1s;
+    box-shadow: 0 0 7px violet;
+    /* animation: bar-anim 1s ease infinite .1s; */
 } 
 
 .loader2 span:nth-child(3) {
     left: 50px;
     background-color: blue;
-    animation: bar-anim 1s ease infinite .2s;
+    box-shadow: 0 0 7px blue;
+    /* animation: bar-anim 1s ease infinite .2s; */
 } 
 
 .loader2 span:nth-child(4) {
     left: 75px;
     background-color: green;
-    animation: bar-anim 1s ease infinite .3s;
+    box-shadow: 0 0 7px green;
+    /* animation: bar-anim 1s ease infinite .3s; */
 } 
 
 .loader2 span:nth-child(5) {
     left: 100px;
     background-color: yellow;
-    animation: bar-anim 1s ease infinite .4s;
+    box-shadow: 0 0 7px yellow;
+    /* animation: bar-anim 1s ease infinite .4s; */
 }
 
 .loader2 span:nth-child(6) {
     left: 125px;
     background-color: orange;
-    animation: bar-anim 1s ease infinite .5s;
+    box-shadow: 0 0 7px orange;
+    /* animation: bar-anim 1s ease infinite .5s; */
 } 
 
 .loader2 span:nth-child(7) {
     left: 150px;
     background-color: red;
-    animation: bar-anim 1s ease infinite .6s;
+    box-shadow: 0 0 7px red;
+    /* animation: bar-anim 1s ease infinite .6s; */
 } 
 
 .loader2 span:nth-child(8) {
     left: 175px;
-    animation: bar-anim 1s ease infinite .7s;
+    box-shadow: 0 0 7px white;
+    /* animation: bar-anim 1s ease infinite .7s; */
 } 
+
+/*********** Loader 3 ************/
+
+.loader3 .square::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid orange;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: loader3before 2s ease infinite;
+}
+
+.loader3 .square::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 100px solid green;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    animation: loader3after 2s ease infinite;
+}
+
+@keyframes loader3 {
+    0%, 50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader3before {
+    0%, 50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader3after {
+    0%, 50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
