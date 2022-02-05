@@ -201,13 +201,13 @@
 /*********** Loader 4 ************/
 
 .loader4 .square {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     border: 10px solid #fff;
     border-top-color: green;
     border-left-color: green;
-    animation: loader4 2s ease infinite;
+    /* animation: loader4 2s ease infinite; */
 }
 
 @keyframes loader4 {
@@ -220,3 +220,41 @@
     }
 }
 
+/*********** Loader 5 ************/
+
+.clock {
+    width: 180px;
+    height: 180px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+}
+
+.clock::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 80px;
+    background-color: #fff;
+    top: 20px;
+    left: calc(50% - 6px);
+    box-shadow: 0 0 5px #fff;
+    border-radius: 5px;
+    transform-origin: bottom;
+    animation: clock 2s ease infinite;
+}
+
+@keyframes clock {
+    0% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(400deg);
+    }
+    80% {
+        transform: rotate(-40deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
