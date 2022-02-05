@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: #222;
     color: #fff;
+    overflow: hidden;
 }
 
 .loader {
@@ -153,7 +154,7 @@
     border-bottom: 100px solid orange;
     border-right: 100px solid transparent;
     border-left: 100px solid transparent;
-    animation: loader3before 2s ease infinite;
+    /* animation: loader3before 2s ease infinite; */
 }
 
 .loader3 .square::after {
@@ -166,7 +167,7 @@
     border-top: 100px solid green;
     border-right: 100px solid transparent;
     border-left: 100px solid transparent;
-    animation: loader3after 2s ease infinite;
+    /* animation: loader3after 2s ease infinite; */
 }
 
 @keyframes loader3 {
@@ -196,3 +197,26 @@
         transform: rotate(-360deg);
     }
 }
+
+/*********** Loader 4 ************/
+
+.loader4 .square {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    border-top-color: green;
+    border-left-color: green;
+    animation: loader4 2s ease infinite;
+}
+
+@keyframes loader4 {
+    50% {
+        transform: rotate(360deg);
+        border-radius: 0;
+        width: 0;
+        height: 0;
+        border-width: 100px;
+    }
+}
+
