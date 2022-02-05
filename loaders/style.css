@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     height: 100vh;
     background-color: #222;
     color: #fff;
@@ -241,7 +242,7 @@
     box-shadow: 0 0 5px #fff;
     border-radius: 5px;
     transform-origin: bottom;
-    animation: clock 2s ease infinite;
+    /* animation: clock 2s ease infinite; */
 }
 
 @keyframes clock {
@@ -258,3 +259,69 @@
         transform: rotate(360deg);
     }
 }
+
+/*********** Loader 6 ************/
+
+.loader6 div {
+    position: absolute;
+    border-top: 3px solid yellow;
+    border-bottom: 3px solid #fff;
+    border-left: 3px solid blue;
+    border-right: 3px solid blue;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 6px #35d;
+}
+
+.loader6 div:nth-child(1) {
+    width: 180px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+    animation: loader6a 4s ease infinite 1s;
+}
+
+.loader6 div:nth-child(2) {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    height: 150px;
+    animation: loader6b 3s ease infinite;
+}
+
+.loader6 div:nth-child(3) {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 40px;
+    top: 40px;
+    animation: loader6c 2s ease infinite;
+}
+
+@keyframes loader6a {
+    0% {
+        transform: rotate(0deg);        
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader6b {
+    0% {
+        transform: rotate(120deg);        
+    }
+    50% {
+        transform: rotate(480deg);
+    }
+}
+
+@keyframes loader6c {
+    0% {
+        transform: rotate(120deg);        
+    }
+    50% {
+        transform: rotate(-240deg);
+    }
+}
+
