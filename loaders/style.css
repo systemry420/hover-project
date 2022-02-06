@@ -325,3 +325,38 @@
     }
 }
 
+/*********** Loader 7 ************/
+
+.loader7 div::before {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 3px;
+    width: 97%;
+    height: 97%;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 5px #f8a;
+    background-color: transparent;
+    animation: loader7 2s ease infinite;
+}
+
+.loader7 div::after {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 3px;
+    width: 97%;
+    height: 97%;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 5px #d13;
+    animation: loader7 2s linear infinite;
+}
+
+@keyframes loader7 {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
